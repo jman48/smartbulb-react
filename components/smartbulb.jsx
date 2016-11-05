@@ -2,6 +2,7 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
 import Brightness from './brightness.jsx';
+import Mode from './mode.jsx';
 
 /**
  * This is the main component of our application.
@@ -13,6 +14,7 @@ export default class SmartBulb extends React.Component {
             <div>
                 <RaisedButton label="Toggle power" onClick={this.powerToggle}/>
                 <Brightness/>
+                <Mode/>
             </div>
         );
     }
