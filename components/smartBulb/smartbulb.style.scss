@@ -1,0 +1,16 @@
+.smartbulb {
+  display: block;
+  max-width: 600px;
+  margin: 50px auto;
+
+  .control {
+    display: block;
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .control-text {
+    text-align: center;
+    text-transform: uppercase;
+  }
+}

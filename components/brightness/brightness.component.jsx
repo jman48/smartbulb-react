@@ -1,8 +1,8 @@
 import React from 'react';
 
-import IconButton from 'material-ui/IconButton';
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ContentRemove from 'material-ui/svg-icons/content/remove';
+import FloatingActionButton from 'material-ui/FloatingActionButton';
 
 import Style from './_brightness.style.scss';
 
@@ -14,14 +14,18 @@ export default class Brightness extends React.Component {
     render() {
         return (
             <div className="brightness">
-                <IconButton onClick={this.brighter}>
-                    <ContentAdd />
-                </IconButton>
+                <div className="control">
+                    <FloatingActionButton onClick={this.brighter}>
+                        <ContentAdd />
+                    </FloatingActionButton >
+                </div>
 
-                <IconButton onClick={this.dimmer}>
-                    <ContentRemove />
-                </IconButton>
-                <span>Brigntness</span>
+                <div className="control">
+                    <FloatingActionButton onClick={this.dimmer}>
+                        <ContentRemove />
+                    </FloatingActionButton>
+                </div>
+                <p className="control-text">Brigntness</p>
             </div>
         );
     }
