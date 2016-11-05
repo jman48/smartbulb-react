@@ -1,10 +1,12 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 
-class Hello extends React.Component {
+export default class Hello extends React.Component {
+    constructor(props) {
+        super(props);
+        this.props = props;
+    }
+
     render() {
-        return <h1>Smartbulb</h1>
+        return <h1>Hello {this.props.name}</h1>
     }
 }
-
-ReactDOM.render(<Hello/>, document.getElementById('hello'));
