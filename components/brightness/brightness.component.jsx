@@ -1,6 +1,9 @@
 import React from 'react';
 
-import RaisedButton from 'material-ui/RaisedButton';
+import IconButton from 'material-ui/IconButton';
+import ContentAdd from 'material-ui/svg-icons/content/add';
+import ContentRemove from 'material-ui/svg-icons/content/remove';
+
 import Style from './_brightness.style.scss';
 
 /**
@@ -11,8 +14,14 @@ export default class Brightness extends React.Component {
     render() {
         return (
             <div className="brightness">
-                <RaisedButton label="Brighter" onClick={this.brighter}/>
-                <RaisedButton label="Dimmer" onClick={this.dimmer}/>
+                <IconButton onClick={this.brighter}>
+                    <ContentAdd />
+                </IconButton>
+
+                <IconButton onClick={this.dimmer}>
+                    <ContentRemove />
+                </IconButton>
+                <span>Brigntness</span>
             </div>
         );
     }

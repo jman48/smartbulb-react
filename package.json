@@ -12,6 +12,9 @@
   ],
   "author": "John Armstrong",
   "license": "ISC",
+  "scripts": {
+    "start": "webpack-dev-server --progress --colors"
+  },
   "dependencies": {
     "axios": "^0.15.2",
     "material-ui": "^0.16.1",
