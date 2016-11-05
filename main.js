@@ -3,10 +3,16 @@ import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import SmartBulb from './components/smartbulb.jsx';
 
+import injectTapEventPlugin from 'react-tap-event-plugin';
+// Needed for onTouchTap
+// http://stackoverflow.com/a/34015469/988941
+injectTapEventPlugin();
+
 /**
  * Our main application component. This is the entry point of the application for React
  */
 class App extends React.Component {
+
     render() {
         return (
             <MuiThemeProvider>
