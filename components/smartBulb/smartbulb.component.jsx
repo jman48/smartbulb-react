@@ -1,8 +1,8 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
-import Brightness from './brightness.jsx';
-import Mode from './mode.jsx';
+import Brightness from './brightnessComponent/brightness.jsx';
+import Mode from './modeComponent/mode.jsx';
 
 /**
  * This is the main component of our application.

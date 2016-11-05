@@ -3,13 +3,13 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
 /**
- * Contains all the controls to manipulate the brightness of the bulb
+ * Contains all the controls to manipulate the brightnessComponent of the bulb
  */
 export default class Mode extends React.Component {
 
     render() {
         return (
-            <div>
+            <div className="test">
                 <RaisedButton label="Next" onClick={this.nextMode}/>
                 <RaisedButton label="Prev" onClick={this.prevMode}/>
             </div>
