@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
-import SmartBulb from './components/smartbulb.jsx';
+import SmartBulb from './components/smartBulb/smartbulb.component.jsx';
 
 import injectTapEventPlugin from 'react-tap-event-plugin';
 // Needed for onTouchTap

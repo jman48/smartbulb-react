@@ -1,10 +1,10 @@
 import React from 'react';
 
 import RaisedButton from 'material-ui/RaisedButton';
-import Style from './_brightness.scss';
+import Style from './_brightness.style.scss';
 
 /**
- * Contains all the controls to manipulate the brightnessComponent of the bulb
+ * Contains all the controls to manipulate the brightness of the bulb
  */
 export default class Brightness extends React.Component {
 

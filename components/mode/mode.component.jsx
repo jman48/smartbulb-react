@@ -3,7 +3,7 @@ import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 
 /**
- * Contains all the controls to manipulate the brightnessComponent of the bulb
+ * Contains all the controls to manipulate the brightness of the bulb
  */
 export default class Mode extends React.Component {
 
