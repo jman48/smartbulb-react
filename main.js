@@ -1,10 +1,18 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Hello from './components/hello.jsx';
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import SmartBulb from './components/smartbulb.jsx';
 
-class App extends  React.Component {
+/**
+ * Our main application component. This is the entry point of the application for React
+ */
+class App extends React.Component {
     render() {
-        return <Hello name="World"/>;
+        return (
+            <MuiThemeProvider>
+                <SmartBulb/>
+            </MuiThemeProvider>
+        );
     }
 }
 
