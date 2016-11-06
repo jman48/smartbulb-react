@@ -3,6 +3,7 @@ import RaisedButton from 'material-ui/RaisedButton';
 
 import Brightness from '../brightness/brightness.component.jsx';
 import Mode from '../mode/mode.component.jsx';
+import Color from '../color/color.component.jsx';
 
 import Style from './smartbulb.style.scss';
 
@@ -18,6 +19,7 @@ export default class SmartBulb extends React.Component {
                 <div>
                     <Brightness/>
                     <Mode/>
+                    <Color />
                 </div>
             </div>
         );
