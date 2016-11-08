@@ -8,7 +8,7 @@ import Color from '../color/color.component.jsx';
 
 import Style from './smartbulb.style.scss';
 
-export const host = 'https://smartbulb.herokuapp.com/';
+export const host = 'https://smartbulb-server.herokuapp.com';
 
 /**
  * This is the main component of our application.
