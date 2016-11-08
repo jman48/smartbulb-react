@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import {host} from '../smartBulb/smartbulb.component.jsx';
 
 import ColorPicker from '../colorPicker/colorPicker.component.jsx';
 
@@ -33,5 +35,7 @@ export default class Color extends React.Component {
 
 	_updateColor(color, value) {
 		this.colors[color] = value;
+
+		axios.post(`${host}/color`, this.colors);
 	}
 }

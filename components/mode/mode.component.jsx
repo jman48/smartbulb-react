@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import {host} from '../smartBulb/smartbulb.component.jsx';
 
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ContentRemove from 'material-ui/svg-icons/content/remove';
@@ -31,10 +33,12 @@ export default class Mode extends React.Component {
     }
 
     nextMode() {
+        axios.post(`${host}/mode/next`);
         console.log('Selecting next mode');
     }
 
     prevMode() {
+        axios.post(`${host}/mode/prev`);
         console.log('Selecting prev mode');
     }
 }

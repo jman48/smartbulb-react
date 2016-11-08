@@ -1,4 +1,6 @@
 import React from 'react';
+import axios from 'axios';
+import {host} from '../smartBulb/smartbulb.component.jsx';
 
 import ContentAdd from 'material-ui/svg-icons/content/add';
 import ContentRemove from 'material-ui/svg-icons/content/remove';
@@ -31,10 +33,12 @@ export default class Brightness extends React.Component {
     }
 
     brighter() {
+        axios.post(`${host}/brightness/up`);
         console.log('Brightning bulb');
     }
 
     dimmer() {
+        axios.post(`${host}/brightness/down`);
         console.log('Dimming bulb');
     }
 }
