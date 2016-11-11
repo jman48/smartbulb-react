@@ -1,7 +1,7 @@
-!#/bin/bash
+#!/bin/bash
 
 #
-#Build and tag SmartBulb web application
+#Build, tag and package SmartBulb web application
 #
 
 function title {
@@ -15,8 +15,16 @@ npm -no-git-tag-version version patch
 VERSION=$(node -p -e "require('./package.json').version")
 
 title "Commiting and tagging version"
+#Use a custom tag message if provided
+if [ -z "$1" ]; then
+	TAG_MESSAGE="[Automated] Created version $VERSION"
+else
+	echo "Using custom tag message..."
+	TAG_MESSAGE=$1
+fi
+
 git commit -am "[Automated] Updated application version to $VERSION"
-git tag $VERSION
+git tag -a $VERSION -m $TAG_MESSAGE
 git push
 git push --tags
 
