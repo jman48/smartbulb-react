@@ -24,7 +24,7 @@ else
 fi
 
 git commit -am "[Automated] Updated application version to $VERSION"
-git tag -a $VERSION -m $TAG_MESSAGE
+git tag -a $VERSION -m "$TAG_MESSAGE"
 git push
 git push --tags
 
