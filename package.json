@@ -1,6 +1,6 @@
 {
   "name": "smartbulb",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "A react web app to control my smartbulb",
   "main": "index.js",
   "keywords": [
@@ -10,7 +10,8 @@
   "author": "John Armstrong",
   "license": "ISC",
   "scripts": {
-    "start": "webpack-dev-server --progress --colors"
+    "start": "webpack-dev-server --progress --colors",
+    "build": "webpack --progress --colors"
   },
   "dependencies": {
     "axios": "^0.15.2",
