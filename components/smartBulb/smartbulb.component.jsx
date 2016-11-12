@@ -15,6 +15,10 @@ export const host = 'https://smartbulb-server.herokuapp.com';
  */
 export default class SmartBulb extends React.Component {
 
+    constructor() {
+        this.power = true;
+    }
+
     render() {
         return (
             <div className="smartbulb">
@@ -32,7 +36,12 @@ export default class SmartBulb extends React.Component {
      * Toggle the power on/ off
      */
     powerToggle() {
-        axios.post(`${host}/power/toggle`, {});
-        console.log('Toggling power');
+        if (this.power) {
+            axios.post(`${host}/power/off`, {});
+        } else {
+            axios.post(`${host}/power/on`, {});
+        }
+
+        this.power = !this.power;
     }
 }
