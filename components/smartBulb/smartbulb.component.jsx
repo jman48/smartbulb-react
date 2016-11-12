@@ -17,6 +17,8 @@ export default class SmartBulb extends React.Component {
 
     constructor() {
         this.power = true;
+
+        this.powerToggle = this._powerToggle.bind(this);
     }
 
     render() {
@@ -35,7 +37,7 @@ export default class SmartBulb extends React.Component {
     /**
      * Toggle the power on/ off
      */
-    powerToggle() {
+    _powerToggle() {
         if (this.power) {
             axios.post(`${host}/power/off`, {});
         } else {
